@@ -11,6 +11,8 @@ const config = {
 
 firebase.initializeApp(config);
 
+console.log(process.env.FIREBASE_DATABASE_URL);
+
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
