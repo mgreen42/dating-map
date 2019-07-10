@@ -1,17 +1,18 @@
 import * as firebase from 'firebase';
 
 const config = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
+  apiKey: "AIzaSyD9vdaK05J7XGth3yEQfkhWk_USqZKJjUs",
+  authDomain: "dating-map-2826d.firebaseapp.com",
+  databaseURL: "https://dating-map-2826d.firebaseio.com",
+  projectId: "dating-map-2826d",
+  storageBucket: "",
+  messagingSenderId: "956295100953",
+  appId: "1:956295100953:web:a5b1fbca4bd218c2"
 };
 
 firebase.initializeApp(config);
 
-console.log(process.env.FIREBASE_DATABASE_URL);
+console.log(config.databaseURL);
 
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
