@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-react-app",
+  "name": "fourth-of-july",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Madison Green",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
