@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Madison Green",
   "license": "MIT",
+  "engines": {
+    "node": "10.9.0"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
