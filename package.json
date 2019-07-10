@@ -4,9 +4,6 @@
   "main": "index.js",
   "author": "Madison Green",
   "license": "MIT",
-  "engines": {
-    "node": "10.9.0"
-  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
@@ -27,7 +24,7 @@
     "css-loader": "0.28.4",
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
-    "firebase": "4.2.0",
+    "firebase": "^6.2.4",
     "history": "4.7.2",
     "moment": "2.18.1",
     "node-sass": "4.5.3",
