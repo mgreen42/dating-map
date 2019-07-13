@@ -6,13 +6,16 @@ import { startAddAnswer } from '../actions/progress';
 export class PlayPage extends React.Component {
   onSubmit = (answer, id) => {
     this.props.startAddAnswer(this.props.game.id, id, answer);
-    setTimeout(() => {this.props.history.push("/play/:id/summary")}, 20);
+    if(id == 2) {
+      setTimeout(() => {this.props.history.push("/play/:id/summary")}, 20);
+    }
   };
   render() {
     return (
       <div>
         <PlayForm
           game={this.props.game}
+          progress={this.props.progress}
           onSubmit={this.onSubmit}
         />
       </div>
@@ -21,7 +24,8 @@ export class PlayPage extends React.Component {
 };
 
 const mapStateToProps = (state, props) => ({
-  game: state.games.find((game) => game.id === props.match.params.id)
+  game: state.games.find((game) => game.id === props.match.params.id),
+  progress: state.progress
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

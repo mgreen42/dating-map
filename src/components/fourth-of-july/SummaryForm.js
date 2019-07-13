@@ -9,7 +9,7 @@ export default class SummaryForm extends React.Component {
     render() {
         return (
             <div>
-                <p>Your favorite color is {this.props.answers.one}</p>
+                <p>Your favorite color is {this.props.answers.one} because {this.props.answers.two}</p>
                 <button onClick={this.onSubmit}>Great!</button>
             </div>
         )

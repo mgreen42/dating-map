@@ -13,6 +13,11 @@ export default (state = progressReducerDefaultState, action) => {
                 ...state,
                 one: action.answer
             };
+        case 'ADD_ANSWER_TWO':
+            return {
+                ...state,
+                two: action.answer
+            };
         case 'RESET_ANSWERS':
             return {
                 one: 'unknown',
