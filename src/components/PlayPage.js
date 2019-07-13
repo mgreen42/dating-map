@@ -1,17 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PlayForm from './PlayForm';
+import PlayForm from './fourth-of-july/PlayForm';
 import { startAddAnswer } from '../actions/progress';
 
 export class PlayPage extends React.Component {
-  onSubmit = (answer) => {
-    this.props.startAddAnswer(this.props.game.id, answer);
-    this.props.history.push('/dashboard');
+  onSubmit = (answer, id) => {
+    this.props.startAddAnswer(this.props.game.id, id, answer);
+    setTimeout(() => {this.props.history.push("/play/:id/summary")}, 20);
   };
-//   onRemove = () => {
-//     this.props.startRemoveExpense({ id: this.props.expense.id });
-//     this.props.history.push('/dashboard');
-//   };
   render() {
     return (
       <div>
@@ -25,11 +21,11 @@ export class PlayPage extends React.Component {
 };
 
 const mapStateToProps = (state, props) => ({
-  game: state.games.find((game) => game.id === 1)
+  game: state.games.find((game) => game.id === props.match.params.id)
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  startAddAnswer: (gameId, answer) => dispatch(startAddAnswer(gameId, answer))
+  startAddAnswer: (gameId, id, answer) => dispatch(startAddAnswer(gameId, id, answer))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayPage);

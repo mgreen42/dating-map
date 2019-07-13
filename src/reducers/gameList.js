@@ -1,7 +1,7 @@
 //Games Reducer Default State
 const gamesReducerDefaultState = [{
     name: 'Fourth of July',
-    id: 1,
+    id: 'fourth-of-july',
     isOwned: true
 }];
 
